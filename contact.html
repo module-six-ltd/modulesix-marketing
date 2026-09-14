@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Professional body software: membership, credentialing and CPD</title>
-<meta name="description" content="Membership management, credentialing, qualifications and CPD as infrastructure for a professional body. You own the standard. We run the software.">
+<title>Contact Module Six</title>
+<meta name="description" content="How to reach Module Six Ltd: support, new enquiries, data protection, and what to do if a credential or Authority to Work record is wrong.">
 <meta name="theme-color" content="#0B1626">
-<meta property="og:title" content="Professional body software: membership, credentialing and CPD">
-<meta property="og:description" content="Membership management, credentialing, qualifications and CPD as infrastructure for a professional body. You own the standard. We run the software.">
+<meta property="og:title" content="Contact Module Six">
+<meta property="og:description" content="How to reach Module Six Ltd: support, new enquiries, data protection, and what to do if a credential or Authority to Work record is wrong.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://modulesix.co.uk/for-bodies">
-<link rel="canonical" href="https://modulesix.co.uk/for-bodies">
+<meta property="og:url" content="https://modulesix.co.uk/contact">
+<link rel="canonical" href="https://modulesix.co.uk/contact">
 <meta property="og:image" content="https://modulesix.co.uk/assets/og.png">
 <meta property="og:site_name" content="Module Six">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,6 +19,21 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Module Six Ltd","url":"https://modulesix.co.uk","logo":"https://modulesix.co.uk/assets/logo.png","description":"Module Six builds and operates the infrastructure modern professional bodies run on: credentialing, learning, competency and CPD, with a member-owned portable record.","sameAs":["https://ipp.pro"]}
 </script>
 <link rel="stylesheet" href="css/fonts.css">
+<style>
+  .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:26px;}
+  .c-card{background:var(--paper-2);border:1px solid var(--line-light);border-radius:14px;padding:26px 24px;}
+  .c-card h3{font-size:22px;margin:0 0 10px;color:var(--ink);}
+  .c-card p{color:var(--ink-2);font-size:15.5px;}
+  .c-line{margin:0 0 4px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:15px;}
+  .c-line a{color:#9A7325;text-decoration:none;border-bottom:1px solid rgba(154,115,37,.35);}
+  .c-line a:hover{border-bottom-color:#9A7325;}
+  .c-note{font-size:13.5px;color:var(--slate);margin:14px 0 0;}
+  .c-esc{padding:76px 0;}
+  .c-esc h2{margin:0 0 18px;}
+  .c-esc p{max-width:62ch;}
+  .c-legal p{color:var(--ink-2);}
+  @media (max-width:640px){.c-card{padding:22px 20px;}}
+</style>
 <style>
   :root{
     --ink:#0B1626;
@@ -123,6 +138,9 @@
   .paper{background:var(--paper);color:var(--ink-2);}
   .paper .eyebrow{color:#9A7325;}
   .paper h2{color:var(--ink);}
+  .live-body{margin-top:26px;border:1px solid var(--line-light);border-left:3px solid var(--brass);border-radius:6px;background:var(--paper-2);padding:32px 34px 28px;}
+  .live-body h3{font-family:"Fraunces",serif;font-size:23px;color:var(--ink);margin:10px 0 12px;}
+  .live-body p{color:#46566e;font-size:16px;max-width:76ch;margin:0 0 20px;}
   .prod-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap;}
   .prod-head .section-lede{color:var(--ink);}
   .prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
@@ -190,20 +208,20 @@
   .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:26px;flex-wrap:wrap;}
   .foot-bottom small{color:var(--slate);font-size:13px;}
 
-  .aud{display:flex;flex-direction:column;}
-  .aud ul{flex:1 1 auto;}
-  .aud .btn{margin-top:auto;align-self:flex-start;}
+  /* card alignment: name row, body and foot line up across every card in a row */
+  .prod{display:flex;flex-direction:column;}
+  .prod p{flex:1 1 auto;}
+  .prod-foot{margin-top:auto;}
+  @supports (grid-template-rows: subgrid){
+    .prod-grid{grid-template-rows:auto;}
+    .prod{display:grid;grid-template-rows:subgrid;grid-row:span 3;}
+    .prod p{flex:none;}
+  }
 
-  /* FAQ */
-  .faq-list{border-top:1px solid var(--line-light);max-width:76ch;}
-  .faq-list details{border-bottom:1px solid var(--line-light);}
-  .faq-list summary{cursor:pointer;padding:18px 0;font-weight:600;color:var(--ink);font-size:17px;
-    list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:baseline;}
-  .faq-list summary::-webkit-details-marker{display:none;}
-  .faq-list summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brass);flex:0 0 auto;}
-  .faq-list details[open] summary::after{content:"\2013";}
-  .faq-list summary:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:3px;}
-  .faq-list .a{padding:0 0 20px;display:flex;flex-direction:column;gap:11px;color:#46566e;font-size:15.5px;max-width:70ch;}
+  @supports (grid-template-rows: subgrid){
+    .diff-grid{grid-auto-rows:auto;}
+    .diff-cell{display:grid;grid-template-rows:subgrid;grid-row:span 3;align-content:start;}
+  }
 
   @media (max-width:900px){
     .hero-grid,.thesis .wrap,.split .wrap,.proof-grid{grid-template-columns:1fr;gap:40px;}
@@ -322,14 +340,13 @@
         </div>
       </div>
       <a class="nl" href="calibrate.html">For employers</a>
-      <a class="nl active" href="for-bodies.html">For bodies</a>
+      <a class="nl" href="for-bodies.html">For bodies</a>
       <a class="nl" href="about.html">About</a>
     </nav>
     <a class="btn btn-primary" href="index.html#contact">Start a conversation</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 <div class="mnav" id="mnav">
   <a href="the-passport.html">The Passport</a>
   <div class="mnav-group">Products</div>
@@ -346,195 +363,65 @@
 
 
 <a id="top"></a>
+
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow reveal">Professional body software</p>
-      <h1 class="reveal">Run a modern professional body, <span class="em">without building any of it</span>.</h1>
-      <p class="hero-sub reveal">Professional body software for associations, would-be institutes and standards owners: membership management, credentialing, qualifications, competency assessment, CPD and a member-owned record, as infrastructure rather than a build project. You bring the standard and keep it. We run the software underneath it.</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="index.html#contact">Talk to us about your body</a>
-        <a class="btn btn-ghost" href="#model">See the model</a>
-      </div>
-      <div class="hero-meta reveal"><span><b>One</b> body live today</span><span><b>Built</b> to run many</span><span><b>Your</b> standard, kept independent</span></div>
-    </div>
-    <div class="pp-card-wrap reveal" aria-hidden="true" style="align-items:center;">
-      <div style="width:100%;max-width:392px;">
-        <svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-          <g stroke="#2c4063" stroke-width="1"><line x1="20" y1="80" x2="360" y2="80"/><line x1="20" y1="140" x2="360" y2="140"/><line x1="20" y1="200" x2="360" y2="200"/></g>
-          <rect x="150" y="40" width="110" height="200" rx="8" fill="#13233c" stroke="#C0913F" stroke-width="1.4"/>
-          <text x="205" y="64" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" letter-spacing="2" fill="#DDB263">IPP</text>
-          <g fill="#DDB263"><circle cx="205" cy="80" r="5"/><circle cx="205" cy="140" r="5"/><circle cx="205" cy="200" r="5"/></g>
-          <rect x="40" y="58" width="80" height="164" rx="8" fill="none" stroke="#3a4a62" stroke-width="1.2" stroke-dasharray="4 5"/>
-          <rect x="290" y="58" width="80" height="164" rx="8" fill="none" stroke="#3a4a62" stroke-width="1.2" stroke-dasharray="4 5"/>
-          <text x="356" y="76" text-anchor="end" font-family="Hanken Grotesk,sans-serif" font-size="10" fill="#6B7A90">Competency</text>
-          <text x="356" y="136" text-anchor="end" font-family="Hanken Grotesk,sans-serif" font-size="10" fill="#6B7A90">Learning</text>
-          <text x="356" y="196" text-anchor="end" font-family="Hanken Grotesk,sans-serif" font-size="10" fill="#6B7A90">Credentials</text>
-          <path d="M20 268 C 120 250, 150 286, 205 268 S 300 250, 360 268" fill="none" stroke="#C0913F" stroke-width="2" stroke-linecap="round"/>
-          <text x="20" y="294" font-family="IBM Plex Mono,monospace" font-size="9" letter-spacing="1.5" fill="#6B7A90">ONE PASSPORT, OWNED FOR LIFE</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="model" id="model">
-  <div class="wrap">
-    <div class="model-head reveal"><p class="eyebrow">The model</p><h2 class="section-lede">Horizontal products. Vertical bodies. One shared spine.</h2><p class="lead-2">Each profession needs its own body, with its own standards, credentials and governance. None of them needs to rebuild the software underneath. Module Six runs the shared rails; each body sits on top with its own framework; the Passport threads the record through all of them. Today that is project professionals; the same rails could carry quantity surveyors, clinical engineers, data professionals, or any field that needs assured competence.</p></div>
-        <div class="reveal"><div class="lattice-wrap reveal" aria-label="Diagram: shared product rails running beneath vertical professional bodies, with the Passport as a continuous thread">
-      <svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img">
-        <style>
-          .lab{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;fill:#6B7A90;}
-          .body{font-family:"Fraunces",serif;font-weight:600;font-size:19px;fill:#ECE6D9;}
-          .bodysub{font-family:"Hanken Grotesk",sans-serif;font-size:12px;fill:#8895a8;}
-          .rail{font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:15px;fill:#ECE6D9;}
-          .railsub{font-family:"Hanken Grotesk",sans-serif;font-size:11.5px;fill:#7d8aa0;}
-          .future{font-family:"Fraunces",serif;font-weight:500;font-size:16px;fill:#5d6b82;}
-        </style>
-
-        <!-- left rail labels -->
-        <text class="lab" x="20" y="60">PLATFORM</text>
-        <text class="lab" x="20" y="150">RAILS</text>
-        <text class="lab" x="20" y="506">RECORD</text>
-
-        <!-- horizontal product rails -->
-        <g>
-          <rect x="150" y="100" width="830" height="58" rx="6" fill="#16263f" stroke="#26384f"/>
-          <text class="rail" x="170" y="126">Calibrate</text>
-          <text class="railsub" x="170" y="144">Competency, CPD, evidence, the Passport engine</text>
-
-          <rect x="150" y="170" width="830" height="58" rx="6" fill="#16263f" stroke="#26384f"/>
-          <text class="rail" x="170" y="196">Activate</text>
-          <text class="railsub" x="170" y="214">Qualification pathways and the exam engine</text>
-
-          <rect x="150" y="240" width="830" height="58" rx="6" fill="#16263f" stroke="#26384f"/>
-          <text class="rail" x="170" y="266">Educate</text>
-          <text class="railsub" x="170" y="284">Open learning and CPD, the widest way in</text>
-
-          <rect x="150" y="310" width="830" height="58" rx="6" fill="#16263f" stroke="#26384f"/>
-          <text class="rail" x="170" y="336">Validate</text>
-          <text class="railsub" x="170" y="354">Authority to Work compliance</text>
-
-          <rect x="150" y="380" width="830" height="58" rx="6" fill="#16263f" stroke="#26384f"/>
-          <text class="rail" x="170" y="406">Candidate</text>
-          <text class="railsub" x="170" y="424">Verified talent, the recruitment lens</text>
-        </g>
-
-        <!-- vertical body columns standing on the rails -->
-        <rect x="610" y="40" width="160" height="432" rx="8" fill="rgba(219,168,54,.07)" stroke="#C0913F" stroke-width="1.6"/>
-        <text class="body" x="690" y="74" text-anchor="middle">IPP</text>
-        <text class="bodysub" x="690" y="92" text-anchor="middle">Project profession</text>
-        <text class="bodysub" x="690" y="458" text-anchor="middle" fill="#C0913F">Live today</text>
-        <g fill="#DDB263">
-          <circle cx="690" cy="129" r="5.5"/>
-          <circle cx="690" cy="199" r="5.5"/>
-          <circle cx="690" cy="269" r="5.5"/>
-          <circle cx="690" cy="339" r="5.5"/>
-          <circle cx="690" cy="409" r="5" fill="none" stroke="#DDB263" stroke-width="1.8"/>
-        </g>
-
-        <!-- Body 02 -->
-        <rect x="790" y="40" width="160" height="432" rx="8" fill="none" stroke="#3a4a62" stroke-width="1.3" stroke-dasharray="5 6"/>
-        <text class="future" x="870" y="74" text-anchor="middle">Body 02</text>
-        <text class="bodysub" x="870" y="92" text-anchor="middle" fill="#5d6b82">Its own framework</text>
-        <g fill="#3a4a62">
-          <circle cx="870" cy="129" r="4"/><circle cx="870" cy="199" r="4"/><circle cx="870" cy="269" r="4"/><circle cx="870" cy="339" r="4"/><circle cx="870" cy="409" r="4"/>
-        </g>
-
-        <!-- The Passport: the foundation the rest is built on -->
-        <rect x="150" y="486" width="830" height="30" rx="6" fill="rgba(192,145,63,.16)" stroke="#C0913F" stroke-width="1.6"/>
-        <circle cx="690" cy="486" r="5" fill="#C0913F"/>
-        <circle cx="870" cy="486" r="5" fill="#C0913F"/>
-        <text class="rail" x="170" y="506" fill="#DDB263">The Passport</text>
-        <text class="railsub" x="300" y="506" fill="#8895a8">One verified record, owned by the person, portable across every body and every employer.</text>
-      </svg>
-    </div>
-
-    <div class="model-foot">
-      <div class="reveal">
-        <h3>The body owns its standard</h3>
-        <p>Each governance board owns its framework, designations and decisions. Module Six never sets a profession's standard. That independence is what makes the credential credible.</p>
-      </div>
-      <div class="reveal">
-        <h3>The shape is shared, not the content</h3>
-        <p>Every body uses the same five-level scale, the same CPD and evidence model, the same Passport. The areas and elements are each body's own. Real interoperability without faking equivalence.</p>
-      </div>
-      <div class="reveal">
-        <h3>The record is one, not many</h3>
-        <p>The products stay body-neutral on purpose. That is why the Passport can hold a person's standing across several professions in parallel, side by side, never averaged into a single false number.</p>
-      </div>
-    </div></div>
-
-    <p class="honest reveal">We could white-label and fragment the record back into silos. We don't. One record across everything is the whole point.</p>
-  </div>
-</section>
-
-<section class="split">
-  <div class="wrap">
-    <div class="aud reveal"><p class="eyebrow">What you bring</p><h2>Your standard and your members.</h2><ul><li>Your competency framework, designations and entry routes.</li><li>Your governance, your brand, your community.</li><li>The trust your profession already gives you.</li></ul></div>
-    <div class="aud reveal"><p class="eyebrow">What we run</p><h2>The membership management and credentialing platform underneath it.</h2><ul><li>Membership, qualifications, exams and CPD.</li><li>The competency record and the member-owned Passport.</li><li>Learning, billing, email and the employer platform.</li></ul><a class="btn btn-dark" href="index.html#contact">Start a conversation</a></div>
-  </div>
-</section>
-
-<section class="proof">
-  <div class="wrap proof-grid">
-    <div class="reveal"><p class="eyebrow">Proof</p><h2 class="section-lede" style="color:var(--cream);">Not a pitch. A platform running a real body.</h2><div class="stat-row"><div class="stat"><div class="n">5</div><div class="l">products built and deployed</div></div><div class="stat"><div class="n">1</div><div class="l">professional body live on it</div></div><div class="stat"><div class="n">15</div><div class="l">open courses live</div></div></div></div>
-    <div class="reveal"><div class="live-list">
-      <div class="live-row"><span class="dot"></span><span><b>IPP</b> membership, five tiers, designations, CPD, directory and verification</span><span class="live-tag">Live</span></div>
-      <div class="live-row"><span class="dot"></span><span><b>Activate</b> qualification pathways and the exam engine</span><span class="live-tag">Live</span></div>
-      <div class="live-row"><span class="dot"></span><span><b>Calibrate</b> with People Tools, passporting and deployments</span><span class="live-tag">Live</span></div>
-      <div class="live-row"><span class="dot"></span><span><b>Educate</b> catalogue, assessment and the B2B door</span><span class="live-tag">Live</span></div>
-      <div class="live-row"><span class="dot"></span><span><b>Validate</b> Authority to Work: live clearance register, role requirements, reminders and reports</span><span class="live-tag">Live</span></div>
-      <div class="live-row"><span class="dot soon"></span><span><b>Candidate</b>, verified-talent profiles and the agency talent window</span><span class="live-tag soon">Early access</span></div>
-    </div></div>
+  <div class="wrap" style="max-width:880px;">
+    <p class="eyebrow reveal">Contact</p>
+    <h1 class="reveal" style="font-size:clamp(36px,5vw,60px);">Talk to a <span class="em">person</span>.</h1>
+    <p class="hero-sub reveal" style="max-width:52ch;">Three ways in, depending on what you need. All of them reach somebody rather than a queue.</p>
   </div>
 </section>
 
 <section class="paper">
   <div class="wrap">
-    <div class="reveal" style="max-width:60ch;margin-bottom:34px;">
-      <p class="eyebrow dark-on-light">Common questions</p>
-    </div>
-    <div class="faq-list reveal">
-      <details>
-        <summary>What is professional body software?</summary>
-        <div class="a">
-        <p>The systems a membership body needs in order to operate: membership management and renewals, grades and designations, credentialing and qualifications, competency assessment, CPD recording, a public register and certificate verification.</p>
-        <p>Most bodies assemble these from four or five separate tools that do not share a record. Module Six runs them as one platform on a single member record.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Can we start a new professional body on this?</summary>
-        <div class="a">
-        <p>Yes, and that is what it was built for. A new body typically needs eighteen months and a development budget before it can admit a single member. The rails here are already live and proven by a body running on them today, so the work becomes writing your standard and your governance rather than commissioning software.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Do we have to adopt IPP's standards or framework?</summary>
-        <div class="a">
-        <p>No. Your governance board owns your framework, your designations, your entry routes and every decision about who qualifies. Module Six never sets a profession's standard, and that independence is what makes your credential credible.</p>
-        <p>What is shared is the shape: a five-level scale and a common CPD and evidence model, so records stay comparable. The content is entirely yours.</p>
-        </div>
-      </details>
-      <details>
-        <summary>What do our members actually get?</summary>
-        <div class="a">
-        <p>A membership grade and verified post-nominals, a listing in your public register, qualification pathways with an exam engine, CPD recording, and a competency record they own for life and keep if they leave. That last part is the reason they fill it in honestly.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Who owns the member data?</summary>
-        <div class="a">
-        <p>Your body owns its membership and its standard. The individual owns their own competency record. Module Six operates the platform and does not white-label or fragment the record back into silos, which is a deliberate refusal rather than a missing feature.</p>
-        </div>
-      </details>
+    <p class="eyebrow dark-on-light reveal">How to reach us</p>
+    <div class="c-grid">
+
+      <div class="c-card reveal">
+        <h3>Support</h3>
+        <p>An account, a credential, a certificate, or a record that looks wrong.</p>
+        <p class="c-line"><a href="mailto:support@modulesix.co.uk">support@modulesix.co.uk</a></p>
+        <p class="c-line"><a href="tel:+443302238301">0330 223 8301</a></p>
+        <p class="c-note">Monday to Friday, UK business hours. Outside those, email is read first.</p>
+      </div>
+
+      <div class="c-card reveal">
+        <h3>New enquiries</h3>
+        <p>Running a profession, an association or a workforce, and wondering what the platform already does.</p>
+        <p class="c-line"><a href="mailto:hello@modulesix.co.uk">hello@modulesix.co.uk</a></p>
+        <p class="c-note">Module Six is a talk-to-us business, not a checkout.</p>
+      </div>
+
+      <div class="c-card reveal">
+        <h3>Data protection</h3>
+        <p>A subject access request, a correction, an erasure, or a question about how your data is held.</p>
+        <p class="c-line"><a href="mailto:data@modulesix.co.uk">data@modulesix.co.uk</a></p>
+        <p class="c-note">See the <a href="privacy.html">privacy notice</a> and the <a href="dpa.html">data processing agreement</a>.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="cta-band" id="contact">
-  <div class="wrap reveal"><p class="eyebrow" style="text-align:center;">Build your body</p><h2>Bring the standard. We will show you the rest.</h2><p>If you run a profession, an association or a standard, tell us what you are trying to build and we will show you what the platform already does.</p><a class="btn btn-primary" href="mailto:hello@modulesix.co.uk?subject=Founding%20a%20body%20on%20Module%20Six" style="font-size:16px;padding:15px 30px;">hello@modulesix.co.uk</a></div>
+<section class="c-esc">
+  <div class="wrap" style="max-width:820px;">
+    <p class="eyebrow reveal">If a record is wrong</p>
+    <h2 class="reveal" style="font-size:clamp(26px,3.4vw,38px);">Your employer holds the register. We hold the platform.</h2>
+    <p class="reveal">An Authority to Work record, a clearance, a competency or an expiry date is entered and verified by the organisation you work for. They are the people who can change it, and going to them is almost always the fastest route.</p>
+    <p class="reveal">If you cannot get it resolved with them, or you believe a record about you is being held or shared wrongly, contact us directly at <a href="mailto:support@modulesix.co.uk">support@modulesix.co.uk</a> or on <a href="tel:+443302238301">0330 223 8301</a> and we will look at it.</p>
+    <p class="reveal">A card or a shared link never replaces the checks a site or a client is required to make for themselves.</p>
+  </div>
 </section>
+
+<section class="paper c-legal">
+  <div class="wrap" style="max-width:820px;">
+    <p class="eyebrow dark-on-light reveal">Company details</p>
+    <p class="reveal"><strong>Module Six Ltd</strong>, registered in England and Wales, company number <strong>17311940</strong>.</p>
+    <p class="reveal">Registered office: c/o KRW Accountants Ltd, Henge Barn, Pury Hill Business Park, Alderton Road, Towcester, Northamptonshire, NN12 7LS.</p>
+    <p class="reveal">Registered with the Information Commissioner's Office under reference <strong>ZC198668</strong>.</p>
+  </div>
+</section>
+
 
 <footer>
   <div class="wrap">
@@ -557,7 +444,7 @@
       </div>
       <div>
         <h4>Company</h4>
-        <a href="#model">The model</a>
+        <a href="index.html#model">The model</a>
         <a href="index.html#bodies">For bodies</a>
         <a href="index.html#employers">For employers</a>
         <a href="contact.html">Contact</a>
