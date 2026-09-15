@@ -311,12 +311,18 @@
 
   .mobile-menu .mm-label{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);padding:20px 0 2px;}
   .mobile-menu a.mm-cta{margin-top:18px;border-top:none;background:var(--brass);color:#15233b;font-weight:700;text-align:center;border-radius:10px;padding:15px 0;}
+.ms6-skip{position:fixed;left:-9999px;top:0;z-index:99999}
+.ms6-skip:focus{left:8px;top:8px;padding:10px 14px;background:#1F3651;color:#fff;
+  border-radius:0 0 6px 6px;font:600 14px/1.2 system-ui,-apple-system,sans-serif;
+  text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.ms6-skip:focus-visible{outline:2px solid #fff;outline-offset:-5px}
 </style>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
+<a class="ms6-skip" href="#ms6-main">Skip to main content</a>
 
 <header class="nav">
   <div class="wrap nav-inner">
@@ -364,7 +370,7 @@
 
 <a id="top"></a>
 
-<section class="hero">
+<section class="hero" id="ms6-main" tabindex="-1">
   <div class="wrap" style="max-width:880px;">
     <p class="eyebrow reveal">Contact</p>
     <h1 class="reveal" style="font-size:clamp(36px,5vw,60px);">Talk to a <span class="em">person</span>.</h1>
