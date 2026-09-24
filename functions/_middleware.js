@@ -54,8 +54,18 @@ const NEVER_SERVED = [
   '/assets/docs/ms-leg-006_security_and_data_protection_procedures_first_edition.pdf',
 ];
 
+// Earlier editions of a document still in force. Blocked rather than redirected:
+// the next edition is different wording, and sending somebody who asked for the
+// First Edition to the Second would show them terms they may never have agreed
+// to. The superseded text is kept in ipp-docs/superseded and produced on request.
+const SUPERSEDED_DOCS = [
+  '/assets/docs/ms-leg-001_terms_of_service_for_individuals_first_edition.pdf',
+  '/assets/docs/ms-leg-002_terms_of_service_for_organisations_first_edition.pdf',
+];
+
 const BLOCKED_EXACT = [
   ...NEVER_SERVED,
+  ...SUPERSEDED_DOCS,
   ...REMOVED_BUT_CACHED,
   '/package.json',
   '/package-lock.json',
