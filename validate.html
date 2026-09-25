@@ -125,6 +125,14 @@
   .paper h2{color:var(--ink);}
   .prod-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap;}
   .prod-head .section-lede{color:var(--ink);}
+  .prod-step{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9A7325;margin-bottom:6px;}
+  .stepper{list-style:none;padding:0;margin:0 0 34px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;}
+  .stepper::before{content:"";position:absolute;top:19px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--brass),rgba(219,168,54,.35));}
+  .stepper li{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;font-family:"Fraunces",serif;font-weight:600;font-size:18px;color:var(--ink);}
+  .stepper b{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--brass-bright);display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:15px;box-shadow:0 0 0 5px var(--paper);}
+  @media (max-width:560px){.stepper li{font-size:14px;}.stepper b{width:34px;height:34px;font-size:13px;}.stepper::before{top:16px;}}
+  .btn-hero{font-size:16px;padding:16px 30px;}
+  .hero-note{margin-top:14px;font-size:14px;color:var(--cream-dim);}
   .prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
   .prod{background:var(--paper-2);border:1px solid var(--line-light);border-radius:6px;padding:30px 30px 26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s;}
   .prod:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(17,32,58,.5);border-color:rgba(219,168,54,.5);}
@@ -393,13 +401,14 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow reveal">Validate &middot; competence management and Authority to Work</p>
+      <p class="eyebrow reveal">Validate &middot; competence management for rail, utilities, telecoms and highways</p>
       <h1 class="reveal">Sentinel proves the ticket. Validate proves you <span class="em">authorised</span> them.</h1>
-      <p class="hero-sub reveal">Validate is a competence management system for your whole workforce. A card scheme tells you what somebody holds. Whether they are authorised to do your work, on your job, today, is your decision and your record. Validate holds that record for every kind of work you do, rail, utilities, telecoms, highways and construction alike, and it never calls somebody cleared on data it cannot stand behind.</p>
+      <p class="hero-sub reveal">For employers in rail, utilities, telecoms, highways and construction. A card scheme tells you what somebody holds. Whether they are authorised to do your work, on your job, today, is your decision and your Authority to Work. Validate holds that record for your whole workforce, and it never calls somebody cleared on data it cannot stand behind.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://calibrate.modulesix.io/start?product=validate" target="_blank" rel="noopener">Start a free 30-day trial</a>
-        <a class="btn btn-ghost" href="https://validate.modulesix.io/demo" target="_blank" rel="noopener">See the demo</a>
+        <a class="btn btn-primary btn-hero" href="https://validate.modulesix.io/demo" target="_blank" rel="noopener">Try the live demo</a>
+        <a class="btn btn-ghost" href="https://validate.modulesix.io/start" target="_blank" rel="noopener">Start a free 30-day trial</a>
       </div>
+      <p class="hero-note reveal">No sign-in, nothing saves. Or start a trial: five seats, no card.</p>
       <div class="hero-meta reveal"><span><b>Every sector</b> on one register</span><span><b>From &pound;21</b> per person / yr</span><span><b>30 days free</b>, five seats, no card</span></div>
     </div>
     <div class="pp-card-wrap reveal" aria-hidden="true" style="align-items:center;">
@@ -415,8 +424,8 @@
           <text x="34" y="116" font-family="Georgia,serif" font-size="25" fill="#ffffff">Dana Okafor</text>
           <text x="34" y="138" font-family="Hanken Grotesk,sans-serif" font-size="12.5" fill="#9db0cc">Caldmoor Infrastructure Ltd</text>
           <rect x="282" y="90" width="64" height="64" rx="10" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".24"/>
-          <circle cx="314" cy="114" r="12" fill="#8aa0bf" fill-opacity=".55"/>
-          <path d="M292 152c4-14 14-20 22-20s18 6 22 20" fill="#8aa0bf" fill-opacity=".55"/>
+          <clipPath id="vface"><rect x="283" y="91" width="62" height="62" rx="9"/></clipPath>
+          <image href="assets/validate/dana.webp" x="283" y="91" width="62" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#vface)"/>
           <line x1="34" y1="172" x2="346" y2="172" stroke="#ffffff" stroke-opacity=".13"/>
           <text x="34" y="192" font-family="IBM Plex Mono,monospace" font-size="8.5" letter-spacing="1.2" fill="#8aa0bf">AUTHORITY</text>
           <text x="34" y="209" font-family="Hanken Grotesk,sans-serif" font-size="13" fill="#e6ebf3">In force</text>
@@ -447,11 +456,14 @@
       <p class="eyebrow dark-on-light">How it works</p>
       <h2 class="section-lede" style="color:var(--ink);">Load it, authorise it, carry it, send it.</h2>
     </div>
+    <ol class="stepper reveal" aria-label="The four steps">
+      <li><b>1</b>Load</li><li><b>2</b>Authorise</li><li><b>3</b>Carry</li><li><b>4</b>Send</li>
+    </ol>
     <div class="prod-grid">
-      <div class="prod reveal"><div class="prod-top"><span class="prod-name">1. Load</span><span class="prod-tag">One sheet</span></div><p>Download a template filtered to your industry: one row per person, one column per ticket, the expiry date in the cell. Upload it and a preview shows exactly what will change before anything is written. Export gives you the same file back, so the sheet you keep and the register never disagree.</p><div class="prod-foot"><span class="who">Your whole workforce in one go</span></div></div>
-      <div class="prod reveal"><div class="prod-top"><span class="prod-name">2. Authorise</span><span class="prod-tag">Signed off by name</span></div><p>Raise an Authority to Work and the approvers you name sign it off in the product: the line manager by default, plus a second approver such as a subject expert if you want one. Nobody approves their own. Document control files it under a reference. Record a restriction such as no work at height without ever holding the medical reason, and stop an authority the moment you need to. Print the record and it shows who approved and when.</p><div class="prod-foot"><span class="who">An authority you can defend in an audit</span></div></div>
-      <div class="prod reveal"><div class="prod-top"><span class="prod-name">3. Carry</span><span class="prod-tag">In their wallet</span></div><p>Each person can add their Authority to Work to Apple Wallet or Google Wallet, with their photograph on it. Scan the QR at the gate and the live register answers in words anyone can read in bad light: Authorised, Check record or Not authorised. Nothing on the phone goes stale, because the scan reads the register, not the card.</p><div class="prod-foot"><span class="who">For the gate, the van and the site office</span></div></div>
-      <div class="prod reveal"><div class="prod-top"><span class="prod-name">4. Send</span><span class="prod-tag">Up to the client</span></div><p>Build the roster for a job and send the principal contractor a link. They accept or decline each person against their own requirements, with no account to create. If a ticket lapses after they have accepted someone, their page tells them. People they take on carry forward to their client above, showing only name, post and whether the authority stands, live, until you end it.</p><div class="prod-foot"><span class="who">From your register to the asset owner</span></div></div>
+      <div class="prod reveal"><div class="prod-top"><span class="prod-name"><span class="prod-step">Step 1</span>Load</span><span class="prod-tag">One sheet</span></div><p>Download a template filtered to your industry: one row per person, one column per ticket, the expiry date in the cell. Upload it and a preview shows exactly what will change before anything is written. Export gives you the same file back, so the sheet you keep and the register never disagree.</p><div class="prod-foot"><span class="who">Your whole workforce in one go</span></div></div>
+      <div class="prod reveal"><div class="prod-top"><span class="prod-name"><span class="prod-step">Step 2</span>Authorise</span><span class="prod-tag">Signed off by name</span></div><p>Raise an Authority to Work and the approvers you name sign it off in the product: the line manager by default, plus a second approver such as a subject expert if you want one. Nobody approves their own. Document control files it under a reference. Record a restriction such as no work at height without ever holding the medical reason, and stop an authority the moment you need to. Print the record and it shows who approved and when.</p><div class="prod-foot"><span class="who">An authority you can defend in an audit</span></div></div>
+      <div class="prod reveal"><div class="prod-top"><span class="prod-name"><span class="prod-step">Step 3</span>Carry</span><span class="prod-tag">In their wallet</span></div><p>Each person can add their Authority to Work to Apple Wallet or Google Wallet, with their photograph on it. Scan the QR at the gate and the live register answers in words anyone can read in bad light: Authorised, Check record or Not authorised. Nothing on the phone goes stale, because the scan reads the register, not the card.</p><div class="prod-foot"><span class="who">For the gate, the van and the site office</span></div></div>
+      <div class="prod reveal"><div class="prod-top"><span class="prod-name"><span class="prod-step">Step 4</span>Send</span><span class="prod-tag">Up to the client</span></div><p>Build the roster for a job and send the principal contractor a link. They accept or decline each person against their own requirements, with no account to create. If a ticket lapses after they have accepted someone, their page tells them. People they take on carry forward to their client above, showing only name, post and whether the authority stands, live, until you end it.</p><div class="prod-foot"><span class="who">From your register to the asset owner</span></div></div>
     </div>
   </div>
 </section>
@@ -563,7 +575,7 @@
     <p class="eyebrow" style="text-align:center;">Get started</p>
     <h2>Put your whole workforce on one register.</h2>
     <p>Download the template, fill it in, upload it, and switch invites on when you are ready. Authority recomputes as you go.</p>
-    <a class="btn btn-primary" href="https://calibrate.modulesix.io/start?product=validate" target="_blank" rel="noopener" style="font-size:16px;padding:15px 30px;">Start a free 30-day trial</a>
+    <a class="btn btn-primary" href="https://validate.modulesix.io/start" target="_blank" rel="noopener" style="font-size:16px;padding:15px 30px;">Start a free 30-day trial</a>
     <a class="btn btn-ghost" href="https://validate.modulesix.io/demo" target="_blank" rel="noopener" style="font-size:16px;padding:15px 30px;margin-left:10px;">See the demo</a>
   </div>
 </section>
