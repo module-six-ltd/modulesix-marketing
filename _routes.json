@@ -51,7 +51,15 @@
     "/terms.html",
     "/terms",
     "/assets/docs/MS-LEG-005_Record_of_Processing_Activities_First_Edition.pdf",
-    "/assets/docs/MS-LEG-006_Security_and_Data_Protection_Procedures_First_Edition.pdf"
+    "/assets/docs/MS-LEG-006_Security_and_Data_Protection_Procedures_First_Edition.pdf",
+    "/assets/docs/MS-DAT-001_Privacy_Notice_First_Edition.pdf",
+    "/assets/docs/ms-dat-001_privacy_notice_first_edition.pdf",
+    "/assets/docs/MS-DAT-002_Data_Processing_Agreement_First_Edition.pdf",
+    "/assets/docs/ms-dat-002_data_processing_agreement_first_edition.pdf",
+    "/assets/docs/MS-LEG-001_Terms_of_Service_for_Individuals_First_Edition.pdf",
+    "/assets/docs/ms-leg-001_terms_of_service_for_individuals_first_edition.pdf",
+    "/assets/docs/MS-LEG-002_Terms_of_Service_for_Organisations_First_Edition.pdf",
+    "/assets/docs/ms-leg-002_terms_of_service_for_organisations_first_edition.pdf"
   ],
   "exclude": []
 }
