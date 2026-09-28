@@ -7,6 +7,7 @@
     "/courses/.DS_Store",
     "/.git/*",
     "/.github/*",
+    "/.githooks/*",
     "/.wrangler/*",
     "/functions/*",
     "/node_modules/*",

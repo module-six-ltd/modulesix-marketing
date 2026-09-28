@@ -27,7 +27,7 @@
 // Deny lists rot. The structural fix is to stop building Pages from the repo root
 // and point the build output at a folder holding only front-end files.
 
-const BLOCKED_PREFIXES = ['/.git/', '/.github/', '/.wrangler/', '/functions/', '/node_modules/'];
+const BLOCKED_PREFIXES = ['/.git/', '/.github/', '/.githooks/', '/.wrangler/', '/functions/', '/node_modules/'];
 
 // Removed from the build, but the edge may still hold a cached copy.
 const REMOVED_BUT_CACHED = [
