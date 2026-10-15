@@ -285,6 +285,8 @@
   .ms6-skip:focus{left:8px;top:8px;padding:10px 14px;background:#15233b;color:#fff;
     border-radius:0 0 6px 6px;font:600 14px/1.2 system-ui,-apple-system,sans-serif;
     text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+  .dd-trigger.active{color:var(--brass-bright);}
+  .dd-menu-sm{min-width:268px;}
 </style>
 <style>
   .legal{max-width:820px;margin:0 auto;padding:0 24px}
@@ -329,7 +331,15 @@
       </div>
       <a class="nl" href="calibrate.html">For employers</a>
       <a class="nl" href="for-bodies.html">For bodies</a>
-      <a class="nl active" href="about.html">About</a>
+      <div class="has-dd">
+        <button class="dd-trigger active" aria-haspopup="true" aria-expanded="false">About
+          <svg class="caret" width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="dd-menu dd-menu-sm" role="menu">
+          <a class="dd-item" role="menuitem" href="about.html"><span class="dd-dot"></span><span class="tx"><span class="nm">About Module Six</span><span class="ds">What we build and how we work</span></span></a>
+          <a class="dd-item" role="menuitem" href="our-story.html"><span class="dd-dot"></span><span class="tx"><span class="nm">Our story</span><span class="ds">How it began, and the team behind it</span></span></a>
+        </div>
+      </div>
     </nav>
     <a class="btn btn-primary" href="index.html#contact">Start a conversation</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -347,6 +357,7 @@
   <a href="calibrate.html">For employers</a>
   <a href="for-bodies.html">For bodies</a>
   <a href="about.html">About</a>
+  <a class="mnav-sub" href="our-story.html">Our story</a>
   <a class="mnav-cta" href="index.html#contact">Start a conversation</a>
 </div>
 
@@ -560,8 +571,7 @@
       setTimeout(function(){thread.style.transition='stroke-dashoffset 1.8s ease';thread.style.strokeDashoffset='0';},500);
     } else if(thread){ thread.style.strokeDashoffset='0'; }
     // products dropdown aria state
-    var dd = document.querySelector('.has-dd');
-    if(dd){
+    document.querySelectorAll('.has-dd').forEach(function(dd){
       var trg = dd.querySelector('.dd-trigger');
       var set = function(v){trg.setAttribute('aria-expanded', v);};
       dd.addEventListener('mouseenter',function(){set('true');});
@@ -569,7 +579,7 @@
       dd.addEventListener('focusin',function(){set('true');});
       dd.addEventListener('focusout',function(e){if(!dd.contains(e.relatedTarget))set('false');});
       trg.addEventListener('keydown',function(e){if(e.key==='Escape'){set('false');trg.blur();}});
-    }
+    });
   })();
 </script>
 
